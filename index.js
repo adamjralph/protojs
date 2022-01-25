@@ -3,5 +3,8 @@
 * By Adam Ralph */
 
 // Test 
-console.log(document.getElementById('heading'));
-document.getElementById('heading').style.color = 'red';
+// console.log(document.getElementById('heading'));
+// const heading = document.getElementById('heading');
+export default function add(x, y) {
+  return x + y;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "protojs",
+  "version": "1.0.0",
+  "description": "## A prototyle expenses tracker",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamjralph/protojs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamjralph/protojs/issues"
+  },
+  "homepage": "https://github.com/adamjralph/protojs#readme"
+}
