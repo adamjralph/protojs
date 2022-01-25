@@ -17,7 +17,8 @@ There are two main reasons for this.
 It is intended that this app have the following features:
 
 * A web user interface using html and css to for input and output
-* A form for entering expenses with the following data
-** Cost
-
+* A form for entering name of the item as a string and the price as integer
+* A button to submit the data
+* A display of currently entered items and price 
+* A calculate button which initiates sun of all prices and displays results
 
