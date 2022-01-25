@@ -27,6 +27,10 @@ It is intended that this app have the following features:
 #### Use of Selectors
 Ids will be used for for selecting elements with JavaScript (getElementsById).
 Classes will be used for styling with CSS.
+
+Class groups inlude:
+* input - for styling all input fields
+* btn - for styling all buttons 
 #### The HTML elements
 * h1 for name and purpose of app
     - ID of heading
@@ -35,4 +39,13 @@ Classes will be used for styling with CSS.
     - Class of expenses-form
 * The form contains:
     - span 'Item' with a class of item-lable
-    - input 'Price' with a class of price-lable
+    - input for 'item' with an id of item-name and a class of item-name 
+    - span 'Price' with a class of price-label
+    - input for 'price' with an id of item-price and a class of item-price
+    - button - 'Enter' with an id of enter and a class of enter-btn
+    - table with an id of item-list and a class of item-list
+    - thead wraps tr which wraps th with a colspan of 2 and the title 'Expenses'
+    - tbody wraps tr which wraps:
+        - td 'Item' with id of table-item and a class of table-item
+        - td 'Price'with id of table-price and a class of table-price
+
