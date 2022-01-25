@@ -9,9 +9,31 @@
 </head>
 <body>
   <h1 id="heading">Expense Calculator</h1>
-  <form action="submit">
-    <input type="text" placeholder="Item name">
-
+  <form id="expenses-form" class="expenses-form">
+    <div class="input-group">
+      <span>Item</span>
+      <input type="text" placeholder="item name" name="item" id="item-name" class="item-name input"> 
+    </div>
+    <div class="input-group">
+      <span>Price</span>
+      <input type="number" placeholder="price" name="price" id="price" class="price input"> 
+    </div>
+    <button type="submit" id="enter" class="enter-btn btn">Enter</button> 
+    <table id="item-list" class="item-list">
+      <thead>
+        <tr>
+          <th colspan="2">Expenses</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="table-item" class="table-item">Item</td>
+          <td id="table-price" class="table-price">Price</td>
+        </tr>
+      </tbody>
+      Display
+    </table>
+    <button type="submit" id="calculate-btn" class="calculate-btn btn">Calculate</button> 
   </form>
   
   <script src="index.js"></script>
