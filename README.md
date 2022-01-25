@@ -12,7 +12,7 @@ There are two main reasons for this.
 * Practice commenting code.
 * Learn Markdown and how to create decent documentation.
 
-#### Introduction
+### Introduction
 
 It is intended that this app have the following features:
 
@@ -22,3 +22,17 @@ It is intended that this app have the following features:
 * A display of currently entered items and price 
 * A calculate button which initiates sun of all prices and displays results
 
+### User Interface
+
+####Use of Selectors
+Ids will be used for for selecting elements with JavaScript (getElementsById).
+Classes will be used for styling with CSS.
+####The HTML elements
+*h1 for name and purpose of app
+- ID of heading
+*Form 
+- ID of expenses-form
+- Class of expenses-form
+*The form contains:
+- span 'Item' with a class of item-lable
+- input 'Price' with a class of price-lable
