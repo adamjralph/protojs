@@ -5,20 +5,48 @@
 // Test 
 let val;
 
-const heading = document.getElementById('heading');
-const itemLabel = document.getElementById('item');
+
+// Listen for input
+document.getElementById('expenses-form').addEventListener('submit', function (e) {
+
+  const name = document.getElementById('name').value;
+  const price = document.getElementById('price').value;
+  // let nameData = name.value;
+  // let priceData = price.value;
+
+  getInputData(name, price);
+
+  e.preventDefault();
+
+  // return nameData, priceData
+})
+
+function getInputData(name, price) {
+  console.log(name, price);
+  return name, price
+}
 
 
 
-val = itemLabel;
+// document.getElementById('expenses-form').addEventListener('submit', getInputData);
 
-console.log(val);
-// const form = document.querySelector('form');
-// const formGroup = form.querySelector('input-group')
-// const itemLabel = formGroup.querySelector('item-label');
-// console.log(formGroup);
+// function getInputData(e) {
+//   const name = document.getElementById('name').value;
+//   const price = document.getElementById('price').value;
+//   // console.log(name);
+//   // console.log(price)
+//   e.preventDefault();
+//   let inputData = [name, price];
+//   // console.log(inputData);
+//   return inputData
+// }
 
-export {
-  heading,
-  itemLabel
-};
+// const data = getInputData;
+// console.log(data);
+// console.log(getInputData);
+
+
+
+// export {
+//   getInputData,
+// };

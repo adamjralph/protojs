@@ -1,5 +1,6 @@
-import { heading, itemLabel } from './index.js';
+// import { getInputData } from './index.js';
 
+// Test results output
 function testResult(result) {
   if (result === 'pass') {
     console.log('\x1b[32m%s\x1b[0m', 'PASSED');  //green
@@ -8,21 +9,45 @@ function testResult(result) {
   }
 }
 
-function testSelectors(selector, expectedResult) {
+// Test selector variables
+// function testSelectors(selector, expectedResult) {
+//   console.log(`Testing: ${selector} ...`)
+//   console.log(`Expecting: ${expectedResult}`)
+//   if (selector === expectedResult) {
+//     testResult('pass');
+//   } else {
+//     testResult('fail');
+//   }
+// }
+
+// testSelectors(name.id, 'name');
+// testSelectors(price.id, 'price');
+
+// Test inputs
+
+function testInputs(selector) {
+  console.log(`Testing Input: ${selector}`)
+  console.log('Expecting: Not Null')
   console.log(selector);
-  console.log(`Testing: ${selector} ...`)
-  console.log(`Expecting: ${expectedResult}`)
-  if (selector === expectedResult) {
-    let result = testResult('pass');
+  if (selector != null) {
+    testResult('pass');
   } else {
-    let result = testResult('fail');
+    testResult('fail');
   }
 }
 
-console.log(itemLabel.id);
+testInputs(name.id);
+testInputs(price.id);
 
+function testInputData(input,) {
+  const name = document.getElementById('name');
+  const price = document.getElementById('price');
+  console.log(name.value);
+  console.log(price.value);
+  return name.value
+}
 
-testSelectors(heading.id, 'heading');
-testSelectors(itemLabel.id, 'item');
+console.log(name.value);
 
-
+// const inputData = getInputData;
+// console.log(getInputData.inputData);
