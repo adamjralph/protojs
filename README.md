@@ -29,10 +29,10 @@ Ids will be used for for selecting elements with JavaScript (getElementsById).
 Classes will be used for styling with CSS.
 #### The HTML elements
 * h1 for name and purpose of app
-- ID of heading
+    ID of heading
 * Form 
-- ID of expenses-form
-- Class of expenses-form
+    ID of expenses-form
+    Class of expenses-form
 * The form contains:
-- span 'Item' with a class of item-lable
-- input 'Price' with a class of price-lable
+    span 'Item' with a class of item-lable
+    input 'Price' with a class of price-lable
