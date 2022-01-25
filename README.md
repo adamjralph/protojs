@@ -24,15 +24,15 @@ It is intended that this app have the following features:
 
 ### User Interface
 
-####Use of Selectors
-Ids will be used for for selecting elements with JavaScript (getElementsById).
+#### Use of Selectors
+Ids will be used for for selecting elements with JavaScript (getElementsById).
 Classes will be used for styling with CSS.
-####The HTML elements
-*h1 for name and purpose of app
+#### The HTML elements
+* h1 for name and purpose of app
 - ID of heading
-*Form 
+* Form 
 - ID of expenses-form
 - Class of expenses-form
-*The form contains:
+* The form contains:
 - span 'Item' with a class of item-lable
 - input 'Price' with a class of price-lable
