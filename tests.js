@@ -1,3 +1,7 @@
-import add from './index.js';
+import selectHeading from './index.js';
 
-console.log(add(1, 4));
+function testSelection(selection) {
+  if selection = 
+}
+
+

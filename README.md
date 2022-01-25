@@ -4,7 +4,7 @@
 
 ### Using JavaScript, HTML, CSS
 
-This is a learning project. My intent is to comment and document the project as much as possible.
+This is a learning project. My intent is to comment and document the project as much as possible and to experiment as much as possible with test driven development.
 
 There are two main reasons for this.
 
@@ -48,4 +48,7 @@ Class groups inlude:
     - tbody wraps tr which wraps:
         - td 'Item' with id of table-item and a class of table-item
         - td 'Price'with id of table-price and a class of table-price
+
+### Tests
+Tests will be numerous and, for the most part unnecesary as this will be an oportunity to learn how to write simple tests.
 
