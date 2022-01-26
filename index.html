@@ -8,34 +8,35 @@
   <title>ProtoJs</title>
 </head>
 <body>
-  <h1 id="heading" class="heading">Expense Calculator</h1>
-  <form id="expenses-form" class="expenses-form">
-    <div class="input-group">
-      <span class="input-label">Item</span>
-      <input type="text" placeholder="item name" name="item name" id="name" class="name input"> 
-    </div>
-    <div class="input-group">
-      <span class="input-label">Price</span>
-      <input type="number" placeholder="price" name="item price" id="price" class="price input"> 
-
-    </div>
-    <button type="submit" id="enter" class="enter-btn btn">Enter</button> 
-    <table id="item-list" class="item-list">
-      <thead>
-        <tr>
-          <th colspan="2">Expenses</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="table-item" class="table-item">Item</td>
-          <td id="table-price" class="table-price">Price</td>
-        </tr>
-      </tbody>
-      Display
-    </table>
-    <button type="submit" id="calculate-btn" class="calculate-btn btn">Calculate</button> 
-  </form>
+  <div class="container">
+    <h1 id="heading" class="heading">Expense Calculator</h1>
+    <form id="expenses-form" class="expenses-form">
+      <div class="input-group">
+        <span class="input-label">Item</span>
+        <input type="text" placeholder="item name" name="item name" id="name" class="name input"> 
+      </div>
+      <div class="input-group">
+        <span class="input-label">Price</span>
+        <input type="number" placeholder="price" name="item price" id="price" class="price input"> 
+  
+      </div>
+      <button type="submit" id="enter" class="enter-btn btn">Enter</button> 
+      <table id="item-list" class="item-list">
+        <thead>
+          <tr>
+            <th colspan="2">Expenses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="table-item" class="table-item">Item</td>
+            <td id="table-price" class="table-price">Price</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" id="calculate-btn" class="calculate-btn btn">Calculate</button> 
+    </form>
+  </div>
   
   <script type="module" src="index.js"></script>
   <script type="module" src="tests.js"></script>
