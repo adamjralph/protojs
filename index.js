@@ -11,18 +11,19 @@ document.getElementById('expenses-form').addEventListener('submit', function (e)
 
   const name = document.getElementById('name').value;
   const price = document.getElementById('price').value;
-  // let nameData = name.value;
-  // let priceData = price.value;
 
   getInputData(name, price);
 
   e.preventDefault();
 
-  // return nameData, priceData
 })
 
 function getInputData(name, price) {
   console.log(name, price);
+  const displayData = document.getElementById('table-display');
+  console.log(displayData);
+  displayData.appendChild.innerHTML = "<td id='new-td'>Test</td>";
+  // displayData.innerHTML = "<td id='new-td'>Test 2</td>";
   return name, price
 }
 
