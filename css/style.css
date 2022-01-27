@@ -56,33 +56,30 @@ body {
   max-width: 110px;
 }
 
-.item-list {
+/* .item-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-}
+} */
 
-thead {
+/* thead {
   display: flex;
   justify-content: space-evenly;
   border: 1px red solid;
-}
+} */
 
-thead th {
+/* thead th {
   margin: auto;
   border: 1px red solid;
-}
+} */
 
-tbody {
+/* tbody {
   display: flex;
   justify-content: center;
   margin: auto;
-}
+} */
 
 tbody tr td {
   padding: 0 2em;
-}
-tbody tr td div {
-  border: 1px red solid;
 }
