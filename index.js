@@ -10,17 +10,30 @@ function getInputData(e) {
   console.log('Testing');
   e.preventDefault();
 
-  const name = document.getElementById('name');
-  const price = document.getElementById('price');
+  let name = document.getElementById('name');
+  let price = document.getElementById('price');
   let tableDisplay = document.getElementById('table-display');
+
+  let resultItem = document.getElementById('result-item');
+  let resultPrice = document.getElementById('result-price');
+
+  console.log(name.value);
+  console.log(price.value);
+  console.log(resultItem);
+  console.log(resultPrice);
+  resultItem.innerText = name.value;
+  resultPrice.innerText = price.value;
 
   // Create a for each
 
-  let nameTd = document.createElement('td');
-  let priceTd = document.createElement('td');
-  tableDisplay.innerText = name.value;
-  tableDisplay.innerText = price.value;
-  tableDisplay.appendChild(nameTd, priceTd);
+  // let nameDiv = document.createElement('div');
+  // nameDiv.id = 'name-display';
+  // let nameText = document.getElementById('name-display');
+
+  // console.log(nameDiv);
+  // nameText.innerText = name.value;
+  // tableDisplay.innerText = name.value;
+  // tableDisplay.appendChild(nameTd);
 
   //   console.log(nameText);
 };
