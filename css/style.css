@@ -28,26 +28,28 @@ body {
 .expenses-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .heading {
-  text-align: center;
-  font-size: 1.3rem;
+  /* text-align: center; */
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .input-group {
   display: flex;
-  justify-content: space-between;
-  align-items: space-between;
+  width: fit-content;
+  /* justify-content: flex-start; */
+  /* align-items: space-between; */
   margin-bottom: 1em;
 }
 
 .input-label {
   display: inline-block;
   min-width: 40px;
+  max-width: fit-content;
   /* margin: 0 6px; */
 }
 
@@ -82,4 +84,9 @@ body {
 
 tbody tr td {
   padding: 0 2em;
+}
+
+.btn {
+  width: 100%;
+  margin: auto;
 }
