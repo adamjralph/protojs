@@ -22,13 +22,17 @@ function testSelectors(selector, expectedResult) {
   }
 }
 
+// Test function calls
 testGetInputDataLength();
-testGetInputDataTypes();
+// Test data types of input data
+document.getElementById('expenses-form').addEventListener('submit', testGetInputDataTypes);
 
 // Test if getInputData is of length 2
 function testGetInputDataLength() {
-  console.log('Testing length of inputData array = 2...')
-  if (getInputData().length === 2) {
+  let data = getInputData().length;
+  console.log('Testing length of inputData = 2...')
+  console.log(`Array length = ${data}`)
+  if (data === 2) {
     testResult('pass');
   } else {
     testResult('fail');

@@ -29,13 +29,11 @@ function runProgram(e) {
 
 function getInputData() {
 
-  // let inputDataArray = [];
   let name = document.getElementById('nameInput');
   let price = document.getElementById('priceInput');
-  console.log(name.value);
-  console.log(price.value);
-  return [name.value, price.value]
+  return [name.value, parseInt(price.value)];
 }
+
 
 
 export {
