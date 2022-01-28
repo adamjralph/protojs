@@ -74,16 +74,35 @@ body {
 /* Items list */
 .item-list {
   display: flex;
-  justify-content: center;
-  width: 100%;
-  /* border: 1px red solid; */
+  flex-direction: column;
   margin: 0 auto;
+  border: 1px #888 solid;
 }
-.item-list .table-head tr th {
+
+.table-display {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.item-list .table-head th {
   margin: auto;
   width: 100px;
+  /* border: 1px #555 dotted; */
+}
+
+.table-display {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* flex-direction: column; */
+}
+
+.table-display td {
+  margin: auto;
+  width: 100%;
   /* border: 1px blue solid; */
 }
+
 
 .btn {
   width: 100%;

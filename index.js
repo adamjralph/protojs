@@ -15,22 +15,6 @@ function runProgram(e) {
 
   HTMLNameElementId(inputData);
 
-
-  // let name = document.getElementById('nameInput');
-  // let price = document.getElementById('priceInput');
-  // let tableDisplay = document.getElementById('table-display');
-
-  // let resultItem = document.getElementById('result-item');
-  // let resultPrice = document.getElementById('result-price');
-
-  // console.log(name.value);
-  // console.log(price.value);
-  // console.log(resultItem);
-  // console.log(resultPrice);
-  // resultItem.innerText = name.value;
-  // resultPrice.innerText = price.value;
-
-
 };
 
 // Sets the starting value of created <td> element ids to 1
