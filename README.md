@@ -62,5 +62,5 @@ runProgram calls the following helper function
 
  * getInputData() - defines two variables for the input data, name and price which retrieve data via getElementById from nameInput and priceInput element Ids. Data is returned as an array of length two, one string (name) and one integer (price).
 
- * HTMLcreateTdElement - creates two <td> elements
+ * HTMLcreateTdElement - creates two `<td>` elements
 
