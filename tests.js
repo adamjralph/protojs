@@ -1,4 +1,6 @@
 import { runProgram } from './index.js';
+import { getInputData } from './index.js';
+
 
 // Test results output
 function testResult(result) {
@@ -19,6 +21,41 @@ function testSelectors(selector, expectedResult) {
     testResult('fail');
   }
 }
+
+testGetInputDataLength();
+testGetInputDataTypes();
+
+// Test if getInputData is of length 2
+function testGetInputDataLength() {
+  console.log('Testing length of inputData array = 2...')
+  if (getInputData().length === 2) {
+    testResult('pass');
+  } else {
+    testResult('fail');
+  }
+};
+
+function testGetInputDataTypes() {
+
+  console.log('Testing input data for type:');
+  let data = getInputData();
+
+  console.log(typeof data[1]);
+  console.log(`data of index 0 = ${data[0]}`);
+  if (typeof data[0] === 'string') {
+    testResult('pass');
+  } else {
+    testResult('fail');
+  }
+
+  console.log(`data of index 1 = ${data[1]}`);
+  if (typeof data[1] === 'number') {
+    testResult('pass');
+  } else {
+    testResult('fail');
+  }
+}
+
 
 // testSelectors(name.id, 'name');
 // testSelectors(price.id, 'price');
