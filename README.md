@@ -50,10 +50,15 @@ Class groups inlude:
         - td 'Price'with id of table-price and a class of table-price
 
 ### Tests
-Tests will be numerous and, for the most part unnecesary as this will be an oportunity to learn how to write simple tests.
+Tests will be numerous and, for the most part unnecesary as this will be an opportunity to learn how to write simple tests.
 
 ### Main program features
 
-The functionality of the program is initated by the addEventListener on the expenses-form HTML element which calls the function getInputData().
+The program is developed with the idea of creating a series of functions that each do only one thing and will be called from the main program function runProgram()
 
+The functionality of the program is initated by the addEventListener on the expenses-form HTML element which calls the function runProgram() on 'submit' when triggered by the enter button.
+
+runProgram calls the following helper function 
+
+ * getInputData() - defines two variables for the input data, name and price which retrieve data via getElementById from nameInput and priceInput element Ids. Data is returned as an array of length two, one string (name) and one integer (price).
 

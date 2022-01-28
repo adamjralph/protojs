@@ -3,13 +3,13 @@
 * By Adam Ralph */
 
 // Listen for submit
-document.getElementById('expenses-form').addEventListener('submit', getInputData);
+document.getElementById('expenses-form').addEventListener('submit', runProgram);
 
 // Get Input data
-function getInputData(e) {
+function runProgram(e) {
 
-  let name = document.getElementById('name');
-  let price = document.getElementById('price');
+  let name = document.getElementById('nameInput');
+  let price = document.getElementById('priceInput');
   let tableDisplay = document.getElementById('table-display');
 
   let resultItem = document.getElementById('result-item');
@@ -28,5 +28,5 @@ function getInputData(e) {
 
 
 export {
-  getInputData,
+  runProgram,
 };

@@ -1,4 +1,4 @@
-import { getInputData } from './index.js';
+import { runProgram } from './index.js';
 
 // Test results output
 function testResult(result) {
