@@ -1,6 +1,6 @@
-import { runProgram } from './index.js';
-import { getInputData } from './index.js';
-import { HTMLNameElementId } from './index.js';
+// import { runProgram } from './index.js';
+// import { getInputData } from './index.js';
+// import { HTMLNameElementId } from './index.js';
 
 
 // Test results output
@@ -34,7 +34,7 @@ function testSelectors(selector, expectedResult) {
 // document.getElementById('expenses-form').addEventListener('submit', testGetInputDataTypes);
 
 // Test if two new <td> elements are created
-testCreatedTdElements();
+// testCreatedTdElements();
 
 
 // Test if getInputData is of length 2

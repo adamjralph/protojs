@@ -75,7 +75,6 @@ body {
 .item-list {
   display: flex;
   justify-content: center;
-  /* align-items: flex-start; */
   width: 100%;
   /* border: 1px red solid; */
   margin: 0 auto;
@@ -84,9 +83,6 @@ body {
   margin: auto;
   width: 100px;
   /* border: 1px blue solid; */
-}
-
-.item-list thead tr td {
 }
 
 .btn {

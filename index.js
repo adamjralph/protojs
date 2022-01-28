@@ -11,9 +11,10 @@ function runProgram(e) {
 
   e.preventDefault();
 
-  getInputData();
+  let inputData = getInputData();
 
-  HTMLNameElementId();
+  HTMLNameElementId(inputData);
+
 
   // let name = document.getElementById('nameInput');
   // let price = document.getElementById('priceInput');
@@ -68,9 +69,12 @@ function HTMLCreateTdElements() {
   return newElement
 }
 
-function HTMLNameElementId() {
+function HTMLNameElementId(inputData) {
 
+  let firstIndex = inputData[0];
+  let secondIndex = inputData[1]
   let count = getStartingValue();
+
 
   let i = 2;
 
@@ -84,10 +88,12 @@ function HTMLNameElementId() {
 
     if (i === 2) {
       let name = HTMLCreateTdElements().id = elementNameId;
+      assignInputDataToNewElement(firstIndex, elementNameId);
       console.log(name);
 
     } else if (i === 1) {
       let price = HTMLCreateTdElements().id = elementPriceId;
+      assignInputDataToNewElement(secondIndex, elementPriceId)
       console.log(price);
     }
 
@@ -99,10 +105,15 @@ function HTMLNameElementId() {
   return count
 }
 
+function assignInputDataToNewElement(index, elementId) {
+
+  let getNewElement = document.getElementById(elementId);
+  getNewElement.innerText = index;
+}
 
 
-export {
-  runProgram,
-  getInputData,
-  HTMLNameElementId
-};
+// export {
+//   runProgram,
+//   getInputData,
+//   HTMLNameElementId
+// };
