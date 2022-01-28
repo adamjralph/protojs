@@ -1,4 +1,4 @@
-// import { getInputData } from './index.js';
+import { getInputData } from './index.js';
 
 // Test results output
 function testResult(result) {
@@ -10,15 +10,15 @@ function testResult(result) {
 }
 
 // Test selector variables
-// function testSelectors(selector, expectedResult) {
-//   console.log(`Testing: ${selector} ...`)
-//   console.log(`Expecting: ${expectedResult}`)
-//   if (selector === expectedResult) {
-//     testResult('pass');
-//   } else {
-//     testResult('fail');
-//   }
-// }
+function testSelectors(selector, expectedResult) {
+  console.log(`Testing: ${selector} ...`)
+  console.log(`Expecting: ${expectedResult}`)
+  if (selector === expectedResult) {
+    testResult('pass');
+  } else {
+    testResult('fail');
+  }
+}
 
 // testSelectors(name.id, 'name');
 // testSelectors(price.id, 'price');

@@ -20,7 +20,7 @@ It is intended that this app have the following features:
 * A form for entering name of the item as a string and the price as integer
 * A button to submit the data
 * A display of currently entered items and price 
-* A calculate button which initiates sun of all prices and displays results
+* A calculate button which initiates sum, of all prices and displays results
 
 ### User Interface
 
@@ -51,4 +51,9 @@ Class groups inlude:
 
 ### Tests
 Tests will be numerous and, for the most part unnecesary as this will be an oportunity to learn how to write simple tests.
+
+### Main program features
+
+The functionality of the program is initated by the addEventListener on the expenses-form HTML element which calls the function getInputData().
+
 
