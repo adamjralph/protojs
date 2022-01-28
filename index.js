@@ -9,6 +9,8 @@ document.getElementById('expenses-form').addEventListener('submit', runProgram);
 function runProgram(e) {
 
   getInputData();
+
+  createDisplayTdElement();
   // let name = document.getElementById('nameInput');
   // let price = document.getElementById('priceInput');
   // let tableDisplay = document.getElementById('table-display');
@@ -27,6 +29,7 @@ function runProgram(e) {
 
 };
 
+// Gets input data from inputfields and returns array of one string and one number
 function getInputData() {
 
   let name = document.getElementById('nameInput');
@@ -34,9 +37,28 @@ function getInputData() {
   return [name.value, parseInt(price.value)];
 }
 
+// Remove following line
+HTMLCreateTdElements(1);
+
+function HTMLCreateTdElements(count) {
+  const tableDisplay = document.getElementById('table-display');
+  let i = 2;
+  let elementNum = count;
+  let elementId = `display-${elementNum}`;
+  while (i > 0) {
+    tableDisplay.appendChild(document.createElement('td')).id = elementId;
+    console.log(document.getElementById(elementId));
+    elementNum += 1;
+    elementId = `display-${elementNum}`;
+    i -= 1;
+  }
+  return document.getElementById(elementId);
+}
+
 
 
 export {
   runProgram,
   getInputData,
+  HTMLCreateTdElements
 };

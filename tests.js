@@ -1,5 +1,6 @@
 import { runProgram } from './index.js';
 import { getInputData } from './index.js';
+import { HTMLCreateTdElements } from './index.js';
 
 
 // Test results output
@@ -22,10 +23,19 @@ function testSelectors(selector, expectedResult) {
   }
 }
 
-// Test function calls
-testGetInputDataLength();
+/********************************************************************************************
+* Test function calls
+********************************************************************************************/
+
+// Test that the array length is 2
+// testGetInputDataLength();
+
 // Test data types of input data
-document.getElementById('expenses-form').addEventListener('submit', testGetInputDataTypes);
+// document.getElementById('expenses-form').addEventListener('submit', testGetInputDataTypes);
+
+// Test if two new <td> elements are created
+// testCreatedTdElements();
+
 
 // Test if getInputData is of length 2
 function testGetInputDataLength() {
@@ -39,20 +49,24 @@ function testGetInputDataLength() {
   }
 };
 
+// Test that data[0] is of type string 
+// Test that data[1] is of type number
 function testGetInputDataTypes() {
 
   console.log('Testing input data for type:');
-  let data = getInputData();
+  const data = getInputData();
+  const dataIndex0 = typeof data[0];
+  const dataIndex1 = typeof data[1];
 
   console.log(typeof data[1]);
-  console.log(`data of index 0 = ${data[0]}`);
-  if (typeof data[0] === 'string') {
+  console.log(`data of index 0 = ${data[0]} - (${dataIndex0})`);
+  if (dataIndex0 === 'string') {
     testResult('pass');
   } else {
     testResult('fail');
   }
 
-  console.log(`data of index 1 = ${data[1]}`);
+  console.log(`data of index 1 = ${data[1]} - (${dataIndex1})`);
   if (typeof data[1] === 'number') {
     testResult('pass');
   } else {
@@ -60,6 +74,20 @@ function testGetInputDataTypes() {
   }
 }
 
+// Test if two new <td> elements are created
+
+function testCreatedTdElements() {
+  const createdTd = HTMLCreateTdElements(1);
+  let elementId = `display-${1}`
+  const getTdId = document.getElementById(elementId);
+  // console.log(createdTd);
+
+  if (createdTd === getTdId) {
+    testResult('pass');
+  } else {
+    testResult('fail');
+  }
+}
 
 // testSelectors(name.id, 'name');
 // testSelectors(price.id, 'price');
