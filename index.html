@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="heading" class="heading">Expense Calculator</h1>
+    <!-- <h1 id="heading" class="heading">Expense Calculator</h1> -->
     <form id="expenses-form" class="expenses-form">
       <div class="input-group">
         <span class="input-label">Item</span>
@@ -21,22 +21,21 @@
   
       </div>
       <button type="submit" id="enter" class="enter-btn btn">Enter</button> 
-      <table id="item-list" class="item-list">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="table-display">
-            <!-- <td id="result-item" class="result-item"></td>
-            <td id="result-price" class="result-price"></td> -->
-          </tr>
-        </tbody>
-      </table>
-      <button type="submit" id="calculate-btn" class="calculate-btn btn">Calculate</button> 
     </form>
+    <table id="item-list" class="item-list">
+      <thead class="table-head">
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr id="table-display">
+          <!-- <td id="result-item" class="result-item"></td>
+          <td id="result-price" class="result-price"></td> -->
+        </tr>
+      </tbody>
+    </table>
   </div>
   
   <script type="module" src="index.js"></script>

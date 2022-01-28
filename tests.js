@@ -34,7 +34,7 @@ function testSelectors(selector, expectedResult) {
 // document.getElementById('expenses-form').addEventListener('submit', testGetInputDataTypes);
 
 // Test if two new <td> elements are created
-// testCreatedTdElements();
+testCreatedTdElements();
 
 
 // Test if getInputData is of length 2
@@ -77,7 +77,7 @@ function testGetInputDataTypes() {
 // Test if two new <td> elements are created
 
 function testCreatedTdElements() {
-  const createdTd = HTMLCreateTdElements(1);
+  const createdTd = HTMLNameElementId();
   let elementId = `display-${1}`
   const getTdId = document.getElementById(elementId);
   // console.log(createdTd);
