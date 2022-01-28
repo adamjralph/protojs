@@ -1,6 +1,6 @@
 import { runProgram } from './index.js';
 import { getInputData } from './index.js';
-import { HTMLCreateTdElements } from './index.js';
+import { HTMLNameElementId } from './index.js';
 
 
 // Test results output

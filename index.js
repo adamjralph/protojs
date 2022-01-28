@@ -2,15 +2,19 @@
 * A prototype expense tracking app
 * By Adam Ralph */
 
+let value = 3;
 // Listen for submit
 document.getElementById('expenses-form').addEventListener('submit', runProgram);
 
 // Get Input data
 function runProgram(e) {
 
+  e.preventDefault();
+
   getInputData();
 
-  createDisplayTdElement();
+  HTMLNameElementId();
+
   // let name = document.getElementById('nameInput');
   // let price = document.getElementById('priceInput');
   // let tableDisplay = document.getElementById('table-display');
@@ -25,34 +29,74 @@ function runProgram(e) {
   // resultItem.innerText = name.value;
   // resultPrice.innerText = price.value;
 
-  e.preventDefault();
 
 };
+
+// Sets the starting value of created <td> element ids to 1
+function getStartingValue() {
+
+  let form = document.getElementById('table-display');
+  console.log(form);
+
+  let numOfTds = form.childElementCount;
+  console.log(numOfTds);
+
+  if (numOfTds === 0) {
+    return 1
+
+  } else {
+    return (numOfTds += 1) - 1
+  }
+}
 
 // Gets input data from inputfields and returns array of one string and one number
 function getInputData() {
 
   let name = document.getElementById('nameInput');
   let price = document.getElementById('priceInput');
+
   return [name.value, parseInt(price.value)];
 }
 
 // Remove following line
-HTMLCreateTdElements(1);
+// HTMLCreateTdElements();
 
-function HTMLCreateTdElements(count) {
-  const tableDisplay = document.getElementById('table-display');
+function HTMLCreateTdElements() {
+
+  let tableDisplay = document.getElementById('table-display');
+  let newElement = tableDisplay.appendChild(document.createElement('td'));
+  return newElement
+}
+
+function HTMLNameElementId() {
+
+  let count = getStartingValue();
+
   let i = 2;
+
   let elementNum = count;
-  let elementId = `display-${elementNum}`;
+  const elementNameId = `display-name-${elementNum}`;
+  const elementPriceId = `display-price-${elementNum}`;
+
   while (i > 0) {
-    tableDisplay.appendChild(document.createElement('td')).id = elementId;
-    console.log(document.getElementById(elementId));
+
     elementNum += 1;
-    elementId = `display-${elementNum}`;
+
+    if (i === 2) {
+      let name = HTMLCreateTdElements().id = elementNameId;
+      console.log(name);
+
+    } else if (i === 1) {
+      let price = HTMLCreateTdElements().id = elementPriceId;
+      console.log(price);
+    }
+
     i -= 1;
   }
-  return document.getElementById(elementId);
+
+  count += 1;
+  console.log(count);
+  return count
 }
 
 
@@ -60,5 +104,5 @@ function HTMLCreateTdElements(count) {
 export {
   runProgram,
   getInputData,
-  HTMLCreateTdElements
+  HTMLNameElementId
 };
