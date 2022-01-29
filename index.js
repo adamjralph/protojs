@@ -49,7 +49,8 @@ function getInputData() {
 function HTMLCreateTdElements() {
 
   let tableDisplay = document.getElementById('table-display');
-  let newElement = tableDisplay.appendChild(document.createElement('td'));
+  let newElement = tableDisplay.appendChild(document.createElement('li'));
+  newElement.className = 'list-group-item';
   return newElement
 }
 
@@ -63,38 +64,43 @@ function HTMLNameElementId(inputData) {
   let i = 2;
 
   let elementNum = count;
-  const elementNameId = `display-name-${elementNum}`;
-  const elementPriceId = `display-price-${elementNum}`;
+  const itemId = `item-${count}`;
+  // const elementNameId = `display-name-${elementNum}`;
+  // const elementPriceId = `display-price-${elementNum}`;
+  let item = HTMLCreateTdElements().id = itemId;
+  assignInputDataToNewElement(firstIndex, secondIndex, itemId);
 
-  while (i > 0) {
 
-    elementNum += 1;
 
-    if (i === 2) {
-      let name = HTMLCreateTdElements().id = elementNameId;
-      HTMLCreateTdElements().className = 'row';
-      assignInputDataToNewElement(firstIndex, elementNameId);
-      console.log(name);
+  // while (i > 0) {
 
-    } else if (i === 1) {
-      let price = HTMLCreateTdElements().id = elementPriceId;
-      HTMLCreateTdElements().className = 'row';
-      assignInputDataToNewElement(secondIndex, elementPriceId)
-      console.log(price);
-    }
+  //   elementNum += 1;
 
-    i -= 1;
-  }
+  //   if (i === 2) {
+  //     let name = HTMLCreateTdElements().id = elementNameId;
+  //     HTMLCreateTdElements().className = 'row';
+  //     assignInputDataToNewElement(firstIndex, elementNameId);
+  //     console.log(name);
+
+  //   } else if (i === 1) {
+  //     let price = HTMLCreateTdElements().id = elementPriceId;
+  //     HTMLCreateTdElements().className = 'row';
+  //     assignInputDataToNewElement(secondIndex, elementPriceId)
+  //     console.log(price);
+  //   }
+
+  //   i -= 1;
+  // }
 
   count += 1;
   console.log(count);
   return count
 }
 
-function assignInputDataToNewElement(index, elementId) {
+function assignInputDataToNewElement(firstIndex, secondIndex, itemId) {
 
-  let getNewElement = document.getElementById(elementId);
-  getNewElement.innerText = index;
+  let getNewElement = document.getElementById(itemId);
+  getNewElement.innerText = `${firstIndex} ____ $${secondIndex}`;
 }
 
 

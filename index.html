@@ -24,7 +24,7 @@
               <div class="form-group">
                 <div class="input-group mb-3">
                   <label class="input-label form-label">Price</label>
-                  <input type="number" placeholder="price" name="item price" id="priceInput" class="price input form-control-sm"> 
+                  <input type="float" placeholder="price" name="item price" id="priceInput" class="price input form-control-sm"> 
                 </div>
               </div>
               <div class="form-group">
@@ -38,27 +38,18 @@
                   <button type="submit" class="btn btn-secondary">Enter</button>
                   <button type="button" onclick="reset()" value="reset" class="btn btn-outline-secondary">Reset</button>
                 </div>
-              
-              <!-- <div class="container col"> -->
-                <!-- <div class="row">
-                  <div class="d-grid gap-2 d-md-block">
-                    <div class="form-group">
-                      <div class="input-group mb-3">
-                        <button type="submit" id="enter" class="enter-btn btn btn-secondary btn-inline">Enter</button> 
-                      </div>
-                    </div> 
-                    <div id="reset-values" class="input-group">
-                      <input type="button" onclick="reset()" value="Reset" class="btn btn-outline-secondary btn-inline mb-3">
-                    </div>
-                  </div>
-                </div>  -->
-              <!-- </div> -->
+            
               </form>
           </div>
         </div>
         <div class="col-sm-5 mx-auto mt-5 mb-5">
-          <div class="card card-body text-center">
-            <table id="item-list" class="item-list table col-sm">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Items</h5>
+              <ul class="list-group list-group-flush" id="table-display">
+              </ul>
+            </div>
+            <!-- <table id="item-list" class="item-list table col-sm">
               <thead class="table-head">
                 <tr>
                   <th scope="col">Item</th>
@@ -75,7 +66,7 @@
                   <td id="result-price" class="result-price">Test 4</td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
           </div>
       </div>
       </div>
