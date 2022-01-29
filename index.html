@@ -18,7 +18,7 @@
               <div class="form-group">
                 <div class="input-group mb-3">
                   <label class="input-label form-label">Item</label>
-                  <input type="text" placeholder="item name" name="item name" id="nameInput" class="name input form-control-sm"> 
+                  <input type="text" placeholder="name" name="item name" id="nameInput" class="name input form-control-sm"> 
                 </div>
               </div>
               <div class="form-group">
@@ -29,13 +29,19 @@
               </div>
               <div class="form-group">
                 <div class="input-group mb-3">
-                  <button type="submit" id="enter" class="enter-btn btn btn-dark btn-block">Enter</button> 
+                  <label class="input-label form-label">Total</label>
+                  <input type="number" placeholder="total" name="item price" id="priceinput" class="price input form-control-sm"> 
                 </div>
               </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <button type="submit" id="enter" class="enter-btn btn btn-dark btn-block">Enter</button> 
+                </div>
+              </div> 
             </form>
           </div>
         </div>
-        <div class="col-sm-5 mx-auto mt-5">
+        <div class="col-sm-5 mx-auto mt-5 mb-5">
           <div class="card card-body text-center">
             <table id="item-list" class="item-list table col-sm">
               <thead class="table-head">
@@ -44,19 +50,20 @@
                   <th scope="col">Price</th>
                 </tr>
               </thead>
-              <tbody class="table-body row">
-                <tr id="table-display" class="table-display">
-                  <!-- <td id="result-item" class="result-item"></td>
-                    <td id="result-price" class="result-price"></td> -->
+              <tbody>
+                <tr id="table-display" class="table-display" scope="row">
+                  <td id="result-item" class="result-item">Test 1</td>
+                  <td id="result-price" class="result-price">Test 2</td>
+                </tr>
+                <tr>
+                  <td id="result-item" class="result-item">Test 3</td>
+                  <td id="result-price" class="result-price">Test 4</td>
                 </tr>
               </tbody>
             </table>
           </div>
       </div>
-          
       </div>
-        
-        
     </div>
     <script type="module" src="index.js"></script>
     <script type="module" src="tests.js"></script>
