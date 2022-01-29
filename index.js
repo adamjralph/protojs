@@ -2,12 +2,8 @@
 * A prototype expense tracking app
 * By Adam Ralph */
 
-let sum = [1, 2, 3, 4];
-console.log(sum);
-
-function calculateTotal(inputData, total) {
-  return newTotal
-}
+// Set storage value to zero
+localStorage.setItem('value', 0)
 
 // Listen for submit
 document.getElementById('expenses-form').addEventListener('submit', runProgram);
@@ -19,11 +15,13 @@ function runProgram(e, sum) {
 
   let inputData = getInputData();
 
-  HTMLNameElementId(inputData);
+  // Add price to local storage
+  let total = addPriceToLocalStorage(inputData[1]);
 
-  let total = calculateTotal(inputData);
-  let newTotal = sum.push(total);
-  console.log(newTotal);
+  // Display total in UI
+  displayTotalInUi(total);
+
+  HTMLNameElementId(inputData);
 
 };
 
@@ -50,7 +48,9 @@ function getInputData() {
   let name = document.getElementById('nameInput');
   let price = document.getElementById('priceInput');
 
-  return [name.value, parseInt(price.value)];
+
+
+  return [name.value, parseFloat(price.value)];
 }
 
 function HTMLCreateTdElements() {
@@ -81,6 +81,21 @@ function assignInputDataToNewElement(firstIndex, secondIndex, itemId) {
   let getNewElement = document.getElementById(itemId);
   getNewElement.innerText = `${firstIndex} ____ $${secondIndex}`;
 };
+
+function addPriceToLocalStorage(price) {
+
+  console.log(price);
+  let initialValue = parseFloat(localStorage.getItem('value'));
+  let newValue = initialValue + parseFloat(price);
+  localStorage.setItem('value', newValue);
+  return localStorage.getItem('value');
+}
+
+function displayTotalInUi(total) {
+
+  let getTotalElement = document.getElementById('total');
+  getTotalElement.value = total;
+}
 
 
 
