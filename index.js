@@ -72,11 +72,13 @@ function HTMLNameElementId(inputData) {
 
     if (i === 2) {
       let name = HTMLCreateTdElements().id = elementNameId;
+      HTMLCreateTdElements().className = 'row';
       assignInputDataToNewElement(firstIndex, elementNameId);
       console.log(name);
 
     } else if (i === 1) {
       let price = HTMLCreateTdElements().id = elementPriceId;
+      HTMLCreateTdElements().className = 'row';
       assignInputDataToNewElement(secondIndex, elementPriceId)
       console.log(price);
     }

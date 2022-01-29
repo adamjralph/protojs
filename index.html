@@ -4,41 +4,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <title>ProtoJs</title>
 </head>
-<body>
-  <div class="container">
-    <!-- <h1 id="heading" class="heading">Expense Calculator</h1> -->
-    <form id="expenses-form" class="expenses-form">
-      <div class="input-group">
-        <span class="input-label">Item</span>
-        <input type="text" placeholder="item name" name="item name" id="nameInput" class="name input"> 
+<body class="bg-dark">
+    <div class="container">
+      <div class="row bg-light mt-5">
+        <div class="col-sm-5 mx-auto mt-5 mb-5">
+          <div class="card card-body">
+            <!-- <h1 id="heading" class="heading">Expense Calculator</h1> -->
+            <form id="expenses-form" class="expenses-form form-text col-sm-4">
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <label class="input-label form-label">Item</label>
+                  <input type="text" placeholder="item name" name="item name" id="nameInput" class="name input form-control-sm"> 
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <label class="input-label form-label">Price</label>
+                  <input type="number" placeholder="price" name="item price" id="priceInput" class="price input form-control-sm"> 
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <button type="submit" id="enter" class="enter-btn btn btn-dark btn-block">Enter</button> 
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-5 mx-auto mt-5">
+          <div class="card card-body text-center">
+            <table id="item-list" class="item-list table col-sm">
+              <thead class="table-head">
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody class="table-body row">
+                <tr id="table-display" class="table-display">
+                  <!-- <td id="result-item" class="result-item"></td>
+                    <td id="result-price" class="result-price"></td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
       </div>
-      <div class="input-group">
-        <span class="input-label">Price</span>
-        <input type="number" placeholder="price" name="item price" id="priceInput" class="price input"> 
-  
+          
       </div>
-      <button type="submit" id="enter" class="enter-btn btn">Enter</button> 
-    </form>
-    <table id="item-list" class="item-list">
-      <thead class="table-head">
-        <tr>
-          <th>Item</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody class="table-body">
-        <tr id="table-display" class="table-display">
-          <!-- <td id="result-item" class="result-item"></td>
-          <td id="result-price" class="result-price"></td> -->
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
-  <script type="module" src="index.js"></script>
-  <script type="module" src="tests.js"></script>
-</body>
-</html>
+        
+        
+    </div>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="tests.js"></script>
+  </body>
+  </html>
