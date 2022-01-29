@@ -2,12 +2,18 @@
 * A prototype expense tracking app
 * By Adam Ralph */
 
-let value = 3;
+let sum = [1, 2, 3, 4];
+console.log(sum);
+
+function calculateTotal(inputData, total) {
+  return newTotal
+}
+
 // Listen for submit
 document.getElementById('expenses-form').addEventListener('submit', runProgram);
 
 // Get Input data
-function runProgram(e) {
+function runProgram(e, sum) {
 
   e.preventDefault();
 
@@ -15,7 +21,9 @@ function runProgram(e) {
 
   HTMLNameElementId(inputData);
 
-  calculateTotal(inputData);
+  let total = calculateTotal(inputData);
+  let newTotal = sum.push(total);
+  console.log(newTotal);
 
 };
 
@@ -25,14 +33,14 @@ function getStartingValue() {
   let form = document.getElementById('table-display');
   console.log(form);
 
-  let numOfTds = form.childElementCount;
-  console.log(numOfTds);
+  let numOfLi = form.childElementCount;
+  console.log(numOfLi);
 
-  if (numOfTds === 0) {
+  if (numOfLi === 0) {
     return 1
 
   } else {
-    return (numOfTds += 1) - 1
+    return (numOfLi += 1) - 1
   }
 }
 
@@ -45,16 +53,13 @@ function getInputData() {
   return [name.value, parseInt(price.value)];
 }
 
-// Remove following line
-// HTMLCreateTdElements();
-
 function HTMLCreateTdElements() {
 
   let tableDisplay = document.getElementById('table-display');
   let newElement = tableDisplay.appendChild(document.createElement('li'));
   newElement.className = 'list-group-item';
   return newElement
-}
+};
 
 function HTMLNameElementId(inputData) {
 
@@ -62,48 +67,21 @@ function HTMLNameElementId(inputData) {
   let secondIndex = inputData[1]
   let count = getStartingValue();
 
-
-  let i = 2;
-
   let elementNum = count;
-  const itemId = `item-${count}`;
-  // const elementNameId = `display-name-${elementNum}`;
-  // const elementPriceId = `display-price-${elementNum}`;
+  const itemId = `item - ${count}`;
   let item = HTMLCreateTdElements().id = itemId;
   assignInputDataToNewElement(firstIndex, secondIndex, itemId);
 
-
-
-  // while (i > 0) {
-
-  //   elementNum += 1;
-
-  //   if (i === 2) {
-  //     let name = HTMLCreateTdElements().id = elementNameId;
-  //     HTMLCreateTdElements().className = 'row';
-  //     assignInputDataToNewElement(firstIndex, elementNameId);
-  //     console.log(name);
-
-  //   } else if (i === 1) {
-  //     let price = HTMLCreateTdElements().id = elementPriceId;
-  //     HTMLCreateTdElements().className = 'row';
-  //     assignInputDataToNewElement(secondIndex, elementPriceId)
-  //     console.log(price);
-  //   }
-
-  //   i -= 1;
-  // }
-
   count += 1;
-  console.log(count);
   return count
-}
+};
 
 function assignInputDataToNewElement(firstIndex, secondIndex, itemId) {
 
   let getNewElement = document.getElementById(itemId);
   getNewElement.innerText = `${firstIndex} ____ $${secondIndex}`;
-}
+};
+
 
 
 // export {
