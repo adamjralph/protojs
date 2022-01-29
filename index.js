@@ -15,6 +15,8 @@ function runProgram(e) {
 
   HTMLNameElementId(inputData);
 
+  calculateTotal(inputData);
+
 };
 
 // Sets the starting value of created <td> element ids to 1
